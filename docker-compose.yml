@@ -3,10 +3,26 @@ services:
   capacitadns:
     image: ubuntu/bind9:9.18-22.04_edge
     container_name: capacitaDNS
+    environment:
+      - BIND9_USER=root
+      - TZ=America/Sao_Paulo
     ports:
       - "53:53/udp"
+      - "53:53/tcp"
     volumes:
-      - ./dns/named.conf.local:/etc/bind/named.conf.local
-      - ./dns/named.conf.options:/etc/bind/named.conf.options
-      - ./dns/db.capacitacao:/etc/bind/db.capacitacao
+      - ./config/named.conf.local:/etc/bind/named.conf.local
+      - ./config/named.conf.options:/etc/bind/named.conf.options
+      - ./config/db.capacitacao:/etc/bind/db.capacitacao
+        #  - ./cache:/var/cache/bind
+        # - ./records:/var/lib/bind
     restart: always
+    networks:
+      minha_rede:
+        ipv4_address: 192.168.16.2
+
+networks:
+  minha_rede:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.16.0/24

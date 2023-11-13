@@ -1,5 +1,21 @@
-options {
-        directory "/var/cache/bind";
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+
+
+zone "capacitacao.intelbras.local" {
+    type master;
+    file "/etc/bind/db.capacitacao";
+};
+
+
+
+
 
         // If there is a firewall between you and nameservers you want
         // to talk to, you may need to fix the firewall to allow multiple
@@ -10,16 +26,19 @@ options {
         // Uncomment the following block, and insert the addresses replacing
         // the all-0's placeholder.
 
-        forwarders {
-              10.1.1.240;
-              10.1.1.70;
-        };
+
+
+
+
 
         //========================================================================
         // If BIND logs error messages about the root key being expired,
         // you will need to update your keys.  See https://www.isc.org/bind-keys
         //========================================================================
-        dnssec-validation auto;
 
-        listen-on-v6 { any; };
-};
+
+
+
+
+
+
