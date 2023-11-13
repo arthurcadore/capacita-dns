@@ -7,7 +7,7 @@ $TTL 86400
                  86400 )         ; Negative Cache TTL
 
     IN  NS      ns1.capacitacao.intelbras.local.
-ns1 IN  A       192.168.16.2      ; IP do servidor para "capacitacao.seudominio.com"
+ns1 IN  A       192.168.16.2      ; IP do servidor para "capacitacao.intelbras.local"
 hub IN  A       10.1.31.27
 hub IN  A       10.1.31.29
 
