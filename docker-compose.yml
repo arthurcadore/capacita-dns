@@ -1,0 +1,12 @@
+version: '3'
+services:
+  capacitadns:
+    image: ubuntu/bind9:9.18-22.04_edge
+    container_name: capacitaDNS
+    ports:
+      - "53:53/udp"
+    volumes:
+      - ./dns/named.conf.local:/etc/bind/named.conf.local
+      - ./dns/named.conf.options:/etc/bind/named.conf.options
+      - ./dns/db.capacitacao:/etc/bind/db.capacitacao
+    restart: always
