@@ -1,44 +1,13 @@
-//
-// Do any local configuration here
-//
+// Author: Arthur Cadore M. Barcella
+// Github: arthurcadore
 
-// Consider adding the 1918 zones here, if they are not used in your
-// organization
-//include "/etc/bind/zones.rfc1918";
+// Main configuration for local Resolver Zone
 
-
-
+// Add new zone for name resolution: 
 zone "capacitacao.intelbras.local" {
     type master;
     file "/etc/bind/db.capacitacao";
 };
-
-
-
-
-
-        // If there is a firewall between you and nameservers you want
-        // to talk to, you may need to fix the firewall to allow multiple
-        // ports to talk.  See http://www.kb.cert.org/vuls/id/800113
-
-        // If your ISP provided one or more IP addresses for stable
-        // nameservers, you probably want to use them as forwarders.
-        // Uncomment the following block, and insert the addresses replacing
-        // the all-0's placeholder.
-
-
-
-
-
-
-        //========================================================================
-        // If BIND logs error messages about the root key being expired,
-        // you will need to update your keys.  See https://www.isc.org/bind-keys
-        //========================================================================
-
-
-
-
 
 
 
