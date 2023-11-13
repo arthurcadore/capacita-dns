@@ -47,6 +47,10 @@ The "&" character creates a process id for the command inputed in, with means th
 Access the application:
 Once the containers are up and running, you can access use DNS resolution by host IP address. 
 
+The application use volume mapping to host configuration files stored in `./config` directory, so, to customize DNS local name resolution, re-configure `named.conf.local`, `named.conf.options` and `db.capacitacao` as your choice. 
+
+It's recommended to configure a new `db.<app>` file, so after you done, remember to change the respectively parameters on `named.conf.local` file!
+
 ---
 
 To stop the running container, use the following command:
