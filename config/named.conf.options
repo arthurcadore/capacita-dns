@@ -1,28 +1,23 @@
 options {
+
+        // Directory to store DNS cache resolv
         directory "/var/cache/bind";
 
-        // If there is a firewall between you and nameservers you want
-        // to talk to, you may need to fix the firewall to allow multiple
-        // ports to talk.  See http://www.kb.cert.org/vuls/id/800113
-
-        // If your ISP provided one or more IP addresses for stable
-        // nameservers, you probably want to use them as forwarders.
-        // Uncomment the following block, and insert the addresses replacing
-        // the all-0's placeholder.
-
+        // Specify below the IP addresses for DNS Servers to Follow. 
+        // Once the name to resolves not be stored in the local server, it will be asked to forwaders servers. 
         forwarders {
               10.1.1.240;
               10.1.1.70;
         };
 
-        //========================================================================
-        // If BIND logs error messages about the root key being expired,
-        // you will need to update your keys.  See https://www.isc.org/bind-keys
-        //========================================================================
+        // DNSsec validadion option: 
         dnssec-validation auto;
 
+        // Configuration to specify who can ask to the server: 
         allow-query { any; };
         allow-query-cache { any; };
+
+        // Configuation to specify compatibility with IPv6 (AAAA) name resolution
         listen-on-v6 { any; };
 };
 
