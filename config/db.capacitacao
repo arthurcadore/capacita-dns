@@ -26,3 +26,4 @@ proxmoxlab       IN  A  10.1.40.184
 proxmoxlab       IN  A  10.1.40.191
 proxmoxlab       IN  A  10.1.40.186
 proxmoxlab       IN  A  10.1.40.185
+zabbix           IN  A  10.1.31.58
