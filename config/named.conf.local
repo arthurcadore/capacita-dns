@@ -1,5 +1,6 @@
 // Author: Arthur Cadore M. Barcella
 // Github: arthurcadore
+
 // Main configuration for local Resolver Zone
 
 // Add new zone for name resolution:
@@ -7,4 +8,3 @@ zone "capacitacao.intelbras.com.br" {
     type master;
     file "/etc/bind/db.capacitacao";
 };
-
