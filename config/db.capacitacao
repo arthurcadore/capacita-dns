@@ -6,23 +6,23 @@ $TTL 86400
                  604800          ; Expire
                  86400 )         ; Negative Cache TTL
 
-    IN  NS      ns1.capacitacao.intelbras.local.
-ns1 IN  A       192.168.16.2      ; IP do servidor para "capacitacao.intelbras.local"
-hub IN  A       10.1.31.27
-hub IN  A       10.1.31.29
-grafanaanalistas IN A   10.1.31.22
-grafanaanalistas IN A   10.1.31.24
-grafanamonitoria IN A   10.1.31.36
-proxmox IN A 10.1.31.20
-proxmox IN A 10.1.31.23
-proxmox IN A 10.1.31.28
-proxmox IN A 10.1.31.31
-proxmox IN A 10.1.31.34
-proxmox IN A 10.1.31.37
-proxmox IN A 10.1.31.30
-proxmox IN A 10.1.31.41
-proxmoxlab IN A 10.1.40.190
-proxmoxlab IN A 10.1.40.184
-proxmoxlab IN A 10.1.40.191
-proxmoxlab IN A 10.1.40.186
-proxmoxlab IN A 10.1.40.185
+                 IN  NS ns1.capacitacao.intelbras.local.
+ns1              IN  A  192.168.16.2      ; IP do servidor para "capacitacao.intelbras.local"
+hub              IN  A  10.1.31.27
+hub              IN  A  10.1.31.29
+grafanaanalistas IN  A  10.1.31.22
+grafanaanalistas IN  A  10.1.31.24
+grafanamonitoria IN  A  10.1.31.36
+proxmox          IN  A  10.1.31.20
+proxmox          IN  A  10.1.31.23
+proxmox          IN  A  10.1.31.28
+proxmox          IN  A  10.1.31.31
+proxmox          IN  A  10.1.31.34
+proxmox          IN  A  10.1.31.37
+proxmox          IN  A  10.1.31.30
+proxmox          IN  A  10.1.31.41
+proxmoxlab       IN  A  10.1.40.190
+proxmoxlab       IN  A  10.1.40.184
+proxmoxlab       IN  A  10.1.40.191
+proxmoxlab       IN  A  10.1.40.186
+proxmoxlab       IN  A  10.1.40.185
