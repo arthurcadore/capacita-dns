@@ -1,12 +1,12 @@
 $TTL 86400
-@   IN  SOA     ns1.capacitacao.intelbras.local. admin.capacitacao.intelbras.local. (
+@   IN  SOA     ns1.capacitacao.intelbras.com.br. admin.capacitacao.intelbras.com.br. (
                  2023111201      ; Serial
                  3600            ; Refresh
                  1800            ; Retry
                  604800          ; Expire
                  86400 )         ; Negative Cache TTL
 
-                 IN  NS ns1.capacitacao.intelbras.local.
+                 IN  NS ns1.capacitacao.intelbras.com.br.
 ns1              IN  A  192.168.16.2      ; IP do servidor para "capacitacao.intelbras.local"
 hub              IN  A  10.1.31.27
 hub              IN  A  10.1.31.29
