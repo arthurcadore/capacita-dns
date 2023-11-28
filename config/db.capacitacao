@@ -26,4 +26,13 @@ proxmoxlab       IN  A  10.1.40.184
 proxmoxlab       IN  A  10.1.40.191
 proxmoxlab       IN  A  10.1.40.186
 proxmoxlab       IN  A  10.1.40.185
-zabbix           IN  A  10.1.31.58
+services         IN  A  10.1.31.25
+services         IN  A  10.1.31.21
+apps             IN  A  10.1.40.201
+apps             IN  A  10.1.40.203
+apps             IN  A  10.1.40.205
+apps             IN  A  10.1.40.206
+pfsense          IN  A  10.1.40.207
+connector        IN  A  10.1.40.208
+wisefi           IN  A  10.1.40.202
+zabbix		 IN  A	10.1.31.58
