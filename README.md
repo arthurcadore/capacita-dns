@@ -1,8 +1,5 @@
 # DNS Server Application with Docker
 
-### Author: Arthur Cadore M. Barcella
-### Network Training Analyst at Intelbras
-
 This project provides a lightweight and portable solution to deploy a DNS server using Docker containers (BIND9). 
 
 ---
