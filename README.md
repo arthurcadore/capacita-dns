@@ -1,9 +1,11 @@
-# capacitaDNS
+# DNS Server Application with Docker
 
 ### Author: Arthur Cadore M. Barcella
 ### Network Training Analyst at Intelbras
 
-This project utilizes Docker Containers to host DNS server (BIND9).
+This project provides a lightweight and portable solution to deploy a DNS server using Docker containers (BIND9). 
+
+---
 Follow the steps below to set up and run the application after pulling the latest changes from this respository.
 
 Prerequisites
