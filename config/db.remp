@@ -1,0 +1,16 @@
+$TTL 86400
+@   IN  SOA     ns1.remp.intelbras.com.br. admin.remp.intelbras.com.br. (
+                 2023111201      ; Serial
+                 3600            ; Refresh
+                 1800            ; Retry
+                 604800          ; Expire
+                 86400 )         ; Negative Cache TTL
+
+                 IN  NS ns1.remp.intelbras.com.br.
+                 IN  NS ns2.remp.intelbras.com.br.
+ns1              IN  A  10.100.83.2
+ns2              IN  A  10.100.83.3 
+dev              IN  A  10.100.73.34
+hom              IN  A  10.100.73.27
+pve1             IN  A  10.100.73.20
+pve2             IN  A  10.100.73.21

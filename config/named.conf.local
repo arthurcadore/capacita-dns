@@ -4,7 +4,7 @@
 // Main configuration for local Resolver Zone
 
 // Add new zone for name resolution:
-zone "capacitacao.intelbras.com.br" {
+zone "remp.intelbras.com.br" {
     type master;
-    file "/etc/bind/db.capacitacao";
+    file "/etc/bind/db.remp";
 };

@@ -26,12 +26,8 @@ Navigate to the project directory:
 cd ./capacita-dns
 ```
 
-Run the command below to setup host server with Dependencies and disable local DNS resolver: 
+Make sure to disable local DNS listening on you machine or change it to another interface: 
 
-```
-chmod +x ./setup.sh
-./setup.sh
-```
 
 Once the installation and configuration was finished, run the command below to start docker-compose file: 
 
