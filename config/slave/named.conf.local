@@ -5,6 +5,8 @@
 
 // Add new zone for name resolution:
 zone "remp.intelbras.com.br" {
-    type master;
-    file "/etc/bind/db.remp";
+    type slave;
+    file "/var/cache/bind/db.remp";
+
+    masters { 10.100.83.3; };
 };

@@ -1,15 +1,28 @@
 version: "3.9"
-
 services:
-  capacitadns:
+  master-dns:
+    # master DNS server, running on 10.100.83.3
     image: ubuntu/bind9:9.18-22.04_edge
-    container_name: capacitaDNS
+    container_name: master-dns
     environment:
       - BIND9_USER=root
       - TZ=America/Sao_Paulo
     volumes:
-      - ./config/named.conf.local:/etc/bind/named.conf.local
-      - ./config/named.conf.options:/etc/bind/named.conf.options
-      - ./config/db.remp:/etc/bind/db.remp
+      - ./config/master/named.conf.local:/etc/bind/named.conf.local
+      - ./config/master/named.conf.options:/etc/bind/named.conf.options
+      - ./config/master/db.remp:/etc/bind/db.remp
+    restart: always
+    network_mode: "host"
+
+  slave-dns:
+    # slave DNS server, running on 10.100.83.2
+    image: ubuntu/bind9:9.18-22.04_edge
+    container_name: slave-dns
+    environment:
+      - BIND9_USER=root
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ./config/slave/named.conf.local:/etc/bind/named.conf.local
+      - ./config/slave/named.conf.options:/etc/bind/named.conf.options
     restart: always
     network_mode: "host"

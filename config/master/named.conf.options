@@ -6,8 +6,8 @@ options {
         // Specify below the IP addresses for DNS Servers to Follow.
         // Once the name to resolves not be stored in the local server, it will be asked to forwaders servers.
         forwarders {
-              10.1.1.240;
-              10.1.1.70;
+            8.8.8.8;
+            1.1.1.1
         };
 
         // DNSsec validadion option:
@@ -18,5 +18,6 @@ options {
         allow-query-cache { any; };
 
         // Configuation to specify compatibility with IPv6 (AAAA) name resolution
-        listen-on-v6 { any; };
+        listen-on port 53 { any; };
+        listen-on-v6 port 53 { any; };
 };

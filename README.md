@@ -1,4 +1,4 @@
-# DNS Server Application with Docker
+# Simple DNS Server Deployment with Docker
 
 This project provides a lightweight and portable solution to deploy a DNS server using Docker containers (BIND9). 
 
@@ -11,10 +11,11 @@ Before you begin, ensure you have the following installed on your system:
 - Git version 2.34.1
 - Docker version 24.0.6, build ed223bc
 - Docker Compose version v2.21.0
+- Make version 4.3
 
 ---
 
-For Getting Started clone the repository:
+### For Getting Started clone the repository:
 
 Copy code below: 
 
@@ -26,32 +27,17 @@ Navigate to the project directory:
 cd ./capacita-dns
 ```
 
-Make sure to disable local DNS listening on you machine or change it to another interface: 
-
-
-Once the installation and configuration was finished, run the command below to start docker-compose file: 
-
+Run make command to build and start the Docker containers:
 ```
-docker compose up -d  & 
+make 
 ```
-
-The "&" character creates a process id for the command inputed in, with means that the container will not stop when you close the terminal. 
 
 ---
 
-Access the application:
+### Access the application:
+
 Once the containers are up and running, you can access use DNS resolution by host IP address. 
 
 The application use volume mapping to host configuration files stored in `./config` directory, so, to customize DNS local name resolution, re-configure `named.conf.local`, `named.conf.options` and `db.capacitacao` as your choice. 
 
 It's recommended to configure a new `db.<app>` file, so after you done, remember to change the respectively parameters on `named.conf.local` file!
-
----
-
-To stop the running container, use the following command:
-
-```
-docker-compose down
-```
-
-This command stops and removes the containers, networks, and volumes defined in the docker-compose.yml file.
