@@ -7,7 +7,7 @@ options {
         // Once the name to resolves not be stored in the local server, it will be asked to forwaders servers.
         forwarders {
             8.8.8.8;
-            1.1.1.1
+            1.1.1.1;
         };
 
         // DNSsec validadion option:

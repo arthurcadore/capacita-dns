@@ -4,7 +4,6 @@ setup:
 	@echo "Setting up the DNS environment..."
 	echo "DNSStubListener=no" | sudo tee -a /etc/systemd/resolved.conf
 	sudo systemctl restart systemd-resolved
-	sudo systemctl status systemd-resolved
 	sudo ss -tuln | grep :53 || true
 
 run:
@@ -31,3 +30,4 @@ clean:
 	docker compose down
 	sudo sed -i '/DNSStubListener=no/d' /etc/systemd/resolved.conf
 	sudo systemctl restart systemd-resolved
+	sudo systemctl status systemd-resolved

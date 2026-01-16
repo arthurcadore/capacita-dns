@@ -29,7 +29,9 @@ cd ./capacita-dns
 
 Run make command to build and start the Docker containers:
 ```
-make 
+make run ROLE=master ARGS="-d" 
+make run ROLE=slave ARGS="-d" 
+
 ```
 
 ---
